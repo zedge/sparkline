@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -49,5 +48,17 @@ Sparkline.prototype.update = function(data){
     var n = data[i] - _min;
     ctx.lineTo(x += sx, h - h * (n / (_max - _min)));
   }
+};
+
+/**
+ * Render sparkline
+ *
+ * After styles are applied and all is well,
+ * hit `render()` and your line appears.
+ * @api public
+ */
+
+Sparkline.prototype.render = function(){
+  var ctx = this.ctx;
   ctx.stroke();
 };
